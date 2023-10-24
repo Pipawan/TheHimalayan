@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    {% extends 'portals/base.html'%}
+    {% block body_block%}
+    <h1><strong>To contact us, please fill this form.</strong></h1>
+</head>
+
+<body>
+
+    <h1>{{post.title}}</h1>
+    {{post.body|linebreaks}}<br><br>
+    {%if csubmit%}
+    <h2> Your message is submit</h2>
+    {%else%}
+    <form method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" class="btn btn-primary btn-lg" name="" value="Submit">
+    </form>
+    {%endif%}
+
+
+
+    {%endblock%}
+</body>

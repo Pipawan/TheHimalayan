@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'portals/base.html'%}
+{% block body_block%}
+<h1> Please Login first</h1>
+<form method="post">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" name="" value="login">
+</form>
+{% endblock %}

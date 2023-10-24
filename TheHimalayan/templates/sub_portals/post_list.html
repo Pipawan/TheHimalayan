@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+    {% extends 'portals/base.html'%}
+    {% block body_block%}
+    <h1> <strong> International News Portal</strong></h1>
+</head>
+
+<body>
+    {%for post in post_list%}
+    <h2> <a href="{{post.get_absolute_url}}">{{post.title}}</a> </h2>
+    <h2> {{post.title}}</h2>
+    <p id="date"> publishd on {{post.publish}}</p>
+    {{post.body|truncatewords:30|linebreaks}}
+    {%endfor%}
+
+    {% include 'sub_portals/pagination.html' with page=post_list%}
+
+</body>
+{%endblock%}

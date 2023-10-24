@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    {% extends 'portals/base.html'%}
+    {% block body_block%}
+</head>
+<body>
+    <div class="content">
+        <p><strong>{{ week_day }}, {{ date_time }} </strong></p>
+        <hr> </hr>
+    </div>
+
+    {% load static %}
+    <img src="{% static 'image/mount.jpg' %}" alt="My image">
+    <img style="max-width: 15px;" src="{{post.image.url}}" />
+
+    <ul class="nav navbar-nav">
+        <h2><strong>Our service:</strong></h2>
+        <li><a href="/politics">Political News Portal</a></li>
+        <p></p>
+        <li><a href="/sports">Sports News Portal</a></li>
+        <p></p>
+        <li><a href="/international">International News Portal</a></li>
+        <p></p>
+        <li><a href="/science">Science and Technology News Portal</a></li>
+    </ul>
+
+</body>
+
+{%endblock%}
