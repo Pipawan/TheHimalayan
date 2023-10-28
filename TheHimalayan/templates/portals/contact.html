@@ -13,11 +13,13 @@
     {%if csubmit%}
     <h2> Your message is submit</h2>
     {%else%}
-    <form method="post">
+    <div class="contact_take_mid">
+        <form method="post">
         {{form.as_p}}
         {%csrf_token%}
         <input type="submit" class="btn btn-primary btn-lg" name="" value="Submit">
     </form>
+    </div>
     {%endif%}
 
 
