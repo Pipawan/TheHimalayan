@@ -2,34 +2,46 @@
 
 <head>
     {% extends 'portals/base.html'%}
+    
     {% block body_block%}
+
 </head>
 
 <body>
-    <div class="header">
-    </div>
 
-    <div class="section">
-        <h2>About</h2>
-        <p>Welcome to <strong>TheHimalayan</strong>, your one-stop destination for the latest news and updates from
-            around the world. We
-            believe in providing our readers with a diverse range of news articles, including international, national,
-            and local stories. Our mission is to inform, educate, and entertain, and we are dedicated to offering you
-            the very best in journalism.</p>
-    </div>
+    <section class="about_section">
 
-    <div class="section">
-        <h2>Our Team</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <!-- {% load static %}
-                <img src="{% static 'image/Pii.jpg' %}" alt="My image">
-                <img style="max-width: 100%; height: auto;" src="{{post.image.url}}" /> -->
-                <h3>Pawan Thapa</h3>
-                <p>Senior Journalist</p>
-            </div>
+        <div class="about_info">
+
+            <h1> About </h1>
+            <p>Welcome to <span class="titleName">TheHimalayan</span>, your one-stop destination for the latest news and updates from
+                around the world. We
+                believe in providing our readers with a diverse range of news articles, including international, national,
+                and local stories. Our mission is to inform, educate, and entertain, and we are dedicated to offering you
+                the very best in journalism.</p>
         </div>
-    </div>
+        
+
+        <div class="team_info">
+            <h2>Our Team</h2>
+
+            <div class="team_member_info">
+                <ul>
+                    <li class="team_member">Pawan Thapa</li>
+                      <ul>
+                        <li>Senior Journalist</li>
+                        <li>Backend Developer</li>
+                      </ul>
+                    <li class="team_member">Pratik Nepal</li>
+                      <ul>
+                        <li>FrontEnd Developer</li>
+                      </ul>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 {%endblock%}

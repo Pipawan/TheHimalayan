@@ -1,0 +1,47 @@
+
+
+.sub_portal_title{
+    margin: 10px;
+    color: rgb(202, 18, 18);
+    font-weight: 900;
+}
+
+.portal_each_section {
+    margin: 20px  10px;
+    padding:20px  5px;
+    border-radius: 5px;
+    background-color: rgb(197, 195, 195);
+    box-shadow:5px 5px 10px 2px rgb(133, 130, 130);
+}
+
+
+.portal_each_section a{
+    text-decoration: none;
+    margin: 5px;
+
+}
+
+#date {
+    margin: 0 5px;
+    font-style: italic;
+    color: rgb(237, 99, 99);
+    font-size: 14px;
+}
+
+.truncate_word {
+    margin: 5px;
+}
+
+.pagination {
+    border: 1px solid;
+    font-size: 20px ;
+    color: white;
+    margin: 10px;
+    width: 10%;
+    background-color: rgb(50, 83, 233);
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

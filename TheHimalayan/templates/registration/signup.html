@@ -1,0 +1,36 @@
+<!-- 
+<!DOCTYPE html>
+{% extends 'portals/base.html'%}
+{% block body_block%}
+
+
+<form action="" method="post" novalidate>
+  {% csrf_token %}
+
+  <div class="container">
+    <h1>Sign Up</h1>
+    {% for each_form in form %}
+
+    <div class="label-tag">
+      {{each_form.label_tag}}<br>
+
+    </div>
+    {{each_form}}
+
+    <small class="form-errors">
+      {{each_form.errors|striptags}}
+    </small>
+    
+    <br><br>
+    {% endfor %}
+    <button class="button-29" role="button">Sign Up</button>
+    <!-- <div class="clearfix">
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div> -->
+    <h2>Alredy have an account ?</h2>
+    <button class="button-29" role="button"><a href="{% url 'login' %}"> Login </a> </button>
+
+  </div>
+</form> <br>
+
+{% endblock %} -->

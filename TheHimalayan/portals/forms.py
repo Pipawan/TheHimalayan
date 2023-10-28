@@ -12,6 +12,7 @@ class ContactForm(forms.Form):
     subject=forms.CharField(max_length=100)
     message=forms.CharField(max_length=1000)
 
+        
 class SignUpForm(forms.ModelForm):
     class Meta:
         model=User

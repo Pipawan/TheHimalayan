@@ -1,0 +1,25 @@
+
+.about_section {
+   margin: 0;
+}
+
+.about_info, 
+.team_info {
+    margin: 10px;
+    background-color: rgb(215, 212, 212);
+    padding: 20px;
+    box-shadow:5px 5px 10px 2px rgb(175, 174, 174);
+}
+
+.about_info h1{
+    font-size: 40px;
+}
+
+.titleName {
+    font-weight: 600;
+}
+
+
+.team_member {
+    font-size: 24px;
+}
