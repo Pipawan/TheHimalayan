@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sacramento&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: #DFDEDA;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar section */
+.navbar {
+   width: 98%;
+   height: 60px;
+   margin: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.leftnav {
+   /* float: left; */
+   width: 50%;
+   display: flex;
+   justify-content: space-evenly;
+   border-radius: 5px;
+   background: rgba(25,48,97,0.3);
+   -webkit-backdrop-filter: blur(20px);
+   backdrop-filter: blur(20px);
+   border: 1px solid rgba(25,48,97,0.15);
+
+}
+
+.leftnav a {
+   text-decoration: none;
+   color: black;
+   padding: 10px;
+}
+
+ /* Rigthnav section */
+ 
+.rightnav {
+   /* float: right; */
+   width: 20%;
+   display: flex;
+   text-decoration: none;
+   margin-right: 20px;
+}
+
+/* login and signup button */
+.r_nav_buttoon {
+   width: 100px;
+   padding: 10px;
+   margin: 0 10px;
+   text-align: center;
+   cursor: pointer;
+   outline: none;
+   color: #fff;
+   background-color: #1204aa;
+   border: none;
+   border-radius: 15px;
+ }
+ 
+ .site_name {
+   font-family: 'Sacramento', cursive;
+   font-size: 50px;
+   font-weight: 900;
+   margin: 10px;
+   padding: 10px 0;
+ }
+
+/* Hover effect */
+
+.leftnav :hover {
+   background: rgba(24,98,210,0.55);
+   backdrop-filter: blur(25px);
+   color: whitesmoke;
+}
+
+.r_nav_buttoon:hover {
+   background-color: #0a0261
+}
+

@@ -7,32 +7,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    
+    <!-- only for base.html page -->
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+
+    <!-- only for base.html page -->
     <link rel="stylesheet" href="{% static 'css/home.css'%}">
+
+    <!-- only for about.html page -->
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+
+    <!-- only for footer.html page -->
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}">
+
+    <!-- only for breaking_news.html page -->
+    <link rel="stylesheet" href="{% static 'css/breaking_news.css'%}">
+
+    <!-- only for subportals page -->
+    <link rel="stylesheet" href="{% static 'css/sub_portals.css'%}">
+    
     <title>TheHimalayan</title>
+
 </head>
 
 <body>
     <div class="navbar">
-        <a href="/home">Home</a>
-        <a href="/breaking_news">Breaking News</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/signup">Sign-Up</a>
-        <a href="/accounts/login">Login</a>
+
+        <div class="leftnav">
+            <a href="/home">Home</a>
+            <a href="/breaking_news">Breaking News</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="rightnav">
+            <a href="/signup"><button class="r_nav_buttoon" > Sign-Up </button></a>
+            <a href="/accounts/login"><button class="r_nav_buttoon" > Login </button></a>
+        </div>  
+
     </div>
 
-    <h1><strong>TheHimalayan</strong></h1>
-    <hr> </hr>
+    <h1 class="site_name"> TheHimalayan </h1>
+
+    
     <div class="content">
         {% block content %}
         {% endblock %}
     </div>
-    </div>
-    {% block body_block %}
-    {% endblock %}
-</body>
 
+    <section class="body_section">
+        {% block body_block %}
+        {% endblock %}    
+    </section>
+
+</body>
+<footer>
+    <section class="footer">
+
+
+        <div class="footer_content">
+
+          <div class="services">
+            <h4>News</h4>
+            <p><a href="#">Political news</a></p>
+            <p><a href="#">Sports News</a></p>
+            <p><a href="#">International News</a></p>
+            <p><a href="#">Science & Technology News</a></p>
+          </div>
+
+          <div class="social-media">
+            <h4>Social</h4>
+            <p>
+              <a href="https://www.linkedin.com/" target="_blank
+                ><i class="fab fa-linkedin"></i> Linkedin</a>
+            </p>
+            <p>
+              <a href="https://twitter.com/" target="_blank"
+                ><i class="fab fa-twitter"></i> Twitter</a>
+            </p>
+            
+              <a href="https://www.facebook.com/" target="_blank
+                ><i class="fab fa-facebook"></i> Facebook</a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/" target="_blank
+                ><i class="fab fa-instagram"></i> Instagram</a>
+            </p>
+          </div>
+
+          <div class="links">
+            <h4>Quick links</h4>
+            <p><a href="/home">Home</a></p>
+            <p><a href="/breaking_news">Breaking News</a></p>
+            <p><a href="/about">About</a></p>
+            <p><a href="/contact">Contact</a></p>
+          </div>
+
+          <div class="details">
+            <h4 class="address">Address</h4>
+            <p>
+             Bharatpur, Chitwan, Nepal
+            </p>
+            <h4 class="mobile">Contact</h4>
+            <p>Phone: +977-9745235027</p>
+            <p><a href="mailto:pawanthapa561@gmail.com">Email: pawanthapa561@gmail.com </a></p>
+          </div>
+
+        </div>
+
+        <div class="liscence">
+
+            <hr />
+            © 2023 TheHimalayan News.
+        </div>
+
+      </section>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </html>

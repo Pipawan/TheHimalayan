@@ -1,13 +1,27 @@
 <!DOCTYPE html>
+
 <head>
     {% extends 'portals/base.html'%}
     {% block body_block%}
 </head>
-<h1> <strong> Political News Portal</strong></h1>
- {%for post in post_list %} 
-  <h2> <a href="{{post.get_absolute_url}}">{{post.title}}</a> </h2> 
- <p id='date'>Published on {{post.publish}}</p> 
- {{post.body|truncatewords:30|linebreaks}} 
- {%endfor%} 
- {% include 'sub_portals/pagination.html' with page=post_list%} 
- {%endblock%} 
+
+<h1 class="sub_portal_title"> Political News Portal</h1>
+
+{%for post in post_list %}
+<div class="portal_each_section">
+
+    <h2> <a href="{{post.get_absolute_url}}">{{post.title}}</a> </h2>
+    <p id='date'>Published on {{post.publish}}</p>
+
+    <div class="truncate_word">
+        {{post.body|truncatewords:30|linebreaks}}
+    </div>
+
+</div>
+
+{%endfor%}
+<div class="pagination">
+    {% include 'sub_portals/pagination.html' with page=post_list%}
+</div>
+
+{%endblock%}

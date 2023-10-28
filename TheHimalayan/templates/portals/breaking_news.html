@@ -3,11 +3,24 @@
     {% extends 'portals/base.html'%}
     {% block body_block%}
 </head>
-<h1> <strong> Breaking News</strong></h1>
- {%for post in post_list %} 
-  <h2> <a href="{{post.get_absolute_url}}">{{post.title}}</a> </h2> 
- <p id='date'>Published on {{post.publish}}</p> 
- {{post.body|truncatewords:30|linebreaks}} 
+   <h1 class="breaking_news_title"> Breaking News </h1>
+    {%for post in post_list %} 
+
+    <div class="breaking_news_section">
+
+        <h2> <a href="{{post.get_absolute_url}}">{{post.title}}</a> </h2> 
+        
+        <p id='date'>Published on {{post.publish}}</p> 
+        
+        <div class="little_info">
+            {{post.body|truncatewords:30|linebreaks}} 
+        </div>
+
+    </div>
  {%endfor%} 
- {% include 'sub_portals/pagination.html' with page=post_list%} 
- {%endblock%} 
+
+   <div class="pagination">
+      {% include 'sub_portals/pagination.html' with  page=post_list%} 
+    </div>
+
+{%endblock%} 

@@ -3,26 +3,51 @@
     {% extends 'portals/base.html'%}
     {% block body_block%}
 </head>
+
 <body>
+    <section class="home">
+
     <div class="content">
-        <p><strong>{{ week_day }}, {{ date_time }} </strong></p>
-        <hr> </hr>
+        <p> <span>{{ week_day }}, {{ date_time }} </span></p>
+        
     </div>
 
     {% load static %}
-    <img src="{% static 'image/mount.jpg' %}" alt="My image">
-    <img style="max-width: 15px;" src="{{post.image.url}}" />
+    <div class="home_img">
+        <img src="{% static 'image/mount.jpg' %}" alt="My image">
+        <img style="max-width: 15px;" src="{{post.image.url}}" />
+    </div>
+    
+    <div class="news_section">
+        <h2><span> Our service: </span></h2>
+        
+        <div class="news_type">
+            
+            <div class="politics news">
+                <img src="{% static 'image/political-news.png' %}" alt="political news">
+                <a href="/politics">Political News Portal</a>
+            </div>
+            
+            <div class="sports news">
+                <img src="{% static 'image/sports.jpg' %}" alt="sports news">
+                <a href="/sports">Sports News Portal</a>
+            </div>
+            
+            <div class="international news">
+                <img src="{% static 'image/international_news.jpg' %}" alt="international news">
+                <a href="/international">International News Portal</a>
+            </div>
+            
+            <div class="science news">
+                <img src="{% static 'image/tech.jpg' %}" alt="si-fi news">
+                <a href="/science">Science and Technology News Portal</a>
+            </div>
 
-    <ul class="nav navbar-nav">
-        <h2><strong>Our service:</strong></h2>
-        <li><a href="/politics">Political News Portal</a></li>
-        <p></p>
-        <li><a href="/sports">Sports News Portal</a></li>
-        <p></p>
-        <li><a href="/international">International News Portal</a></li>
-        <p></p>
-        <li><a href="/science">Science and Technology News Portal</a></li>
-    </ul>
+        </div>
+
+    </div>
+
+</section>
 
 </body>
 
